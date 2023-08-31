@@ -1,18 +1,8 @@
 @extends('layouts.app')
 @section('content')
 <div class=" p-4 mt-14 mb-4 rounded bg-gray-50 dark:bg-gray-800">
-    <h1 class="text-white text-center dark:text-white dark:text-center text-lg pb-10">INI Customer With Virtual Acoount</h1>
-    {{-- @php
-    echo "<script>";
-        echo "alert('hello');";
-        echo "</script>";
-        @endphp --}}
-        @if ($message = Session::get('sukses'))
-				<div class="alert alert-success alert-block text-white dark:text-white">
-					<button type="button" class="close" data-dismiss="alert">×</button> 
-					<strong>{{ $message }}</strong>
-				</div>
-				@endif
+    <h1 class="text-white text-center dark:text-white dark:text-center text-lg pb-10">Customer With Virtual Acoount</h1>
+   
     <
             <div class="relative overflow-x-auto shadow-md pt-3">
                 <form action="{{ route('customer-va.print-lot') }}" method="POST" >
@@ -20,13 +10,11 @@
                 <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
-                            <th scope="col" class=" py-3 dark:bg-green-700"><button class="w-full" type="submit" >Print A Lot</button></th>
+                            <th scope="col" class=" py-3 dark:bg-green-700 bg-green-700 dark:text-white text-white"><button class="w-full" type="submit" >Print</button></th>
                             <th scope="col" class="px-6 py-3">ID Customer</th>
                             <th scope="col" class="px-6 py-3">Nama Customer</th>
                             <th scope="col" class="px-6 py-3">Virtual Account</th>
-                            <th scope="col" class="px-6 py-3">
-                                <span class="sr-only">Aksi</span>
-                            </th>
+                           
                         </tr>
                     </thead>
                     <tbody>
@@ -45,9 +33,7 @@
                             <td class="px-6 py-4">
                                 {{ $customer->virtual_account }}
                             </td>
-                            <td class="px-6 py-4 text-right">
-                                {{-- <a href="{{ url('prospect/edit/'.$prospects->id) }}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a> --}}
-                            </td>
+                           
                         </tr>
                         @endforeach
                         
@@ -55,10 +41,7 @@
                 </table>
                 </form>
             </div>
-            {{-- {{ $customerProspects->links() }} --}}
-
-        {{-- </div> --}}
-    {{-- </div> --}}
+          
  
 
     </div>

@@ -21,5 +21,5 @@ Route::get('/print', function () {
 Route::prefix('customer-va')->controller(CustomerVirtualAccountController::class)->group(function(){
     Route::get('', 'index')->name('customer-va.home');
     Route::post('/print-lot', 'printLot')->name('customer-va.print-lot');
-    Route::post('/print-select', 'printSelect')->name('customer-va.print-select');
+   
 });
